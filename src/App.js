@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import AddTask from './pages/AddTask';
+import Inbox from './pages/Inbox';
+import Profile from './pages/accountPage/Profile';
+import SignIn from './pages/accountPage/SignIn';
+import SignUp from './pages/accountPage/SignUp';
+import Sidebar from './components/Sidebar';
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Sidebar>
+        <Routes>
+          <Route path='/' element={<AddTask/>} />
+          <Route path='/add-task' element={<AddTask/>} />
+          <Route path='/inbox' element={<Inbox/>} />
+          <Route path='/profile' element={<Profile/>} />
+          <Route path='/login' element={<SignIn/>} />
+          <Route path='/register' element={<SignUp/>} />
+        </Routes>
+      </Sidebar>
+    </BrowserRouter>
   );
 }
 
