@@ -1,5 +1,7 @@
 import React from 'react';
 import { IoCheckmarkSharp } from 'react-icons/io5';
+import { FaPlus } from "react-icons/fa6";
+
 
 function Inbox(props) {
     const taskList = [
@@ -114,7 +116,13 @@ function Inbox(props) {
                   </p>
                 </div>
               </div>
+
             ))}
+            <div class="tab_item flex mt-2 pb-4">
+                <div className='flex items-center text-lg font-custom-bold hover:cursor-pointer'>
+                  <FaPlus className='text-cusotom-turquoise me-2' /> Add task
+                </div>
+            </div>
         </div>
       </div>
     );
