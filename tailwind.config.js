@@ -15,6 +15,9 @@ module.exports = {
       },
       fontWeight : {
         'custom-bold' : '500'
+      },
+      borderColor : {
+        'custom-turquoise' : '#4fd1c5'
       }
     },
   },
